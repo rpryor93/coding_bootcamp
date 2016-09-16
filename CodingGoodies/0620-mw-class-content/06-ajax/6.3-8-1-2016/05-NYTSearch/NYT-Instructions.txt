@@ -1,0 +1,90 @@
+New York Times Article Search Application - Instructions
+
+1.	Reference: nytarticle-search.herokuapp.com to see what your final project should be able to accomplish.
+
+2.	Goal:  Create an application that allows you to search New York Times Articles using the New York Times API.
+
+*** This is a hard activity to get right! *** 
+	- It will require you to code quickly, efficiently divide tasks, and deal with bugs in retrospect. 
+	- It's also a really great activity for gaining mastery.
+
+3.	Your group of four should partner into two sub-pairs. With one pair working on "front-end" and the second pair working on "back-end".  Take honest stock of their abilities and focus on what they feel comfortable doing.  When working as front-end and back-end teams they need to learn to "anticipate" what the other pair will give them (i.e. Backend team should expect text inputs, Frontend teams should expect to create dynamic elements to hold retrieved data, etc.)
+
+Project Update I: IDENTIFY THE ONE PERSON FROM YOUR TEAM RESPONSIBLE FOR KEEPING YOUR GROUP ON SCHEDULE (aka Project Manager)
+
+*** READ all of these instructions before beginning ***
+
+***********************************************************
+**********    Phase 1 (8:05 pm) Design and API   **********
+***********************************************************
+
+4. (Front-End Team)
+	- Create the layout for the home page design. Feel free to use Bootstrap or to do something more customized of your own.
+	*** HINT *** Make sure to organize your code so as to have the necessary IDs.  
+	- Incorporate text boxes for capturing User Input. Then research how to retrieve the input values in Javascript
+
+4. (Back-End Team)
+	- Do preliminary research on the API https://developer.nytimes.com/
+	- Register for an API Key.
+	- Understand what format the URL should look like to make an Article Call. (Hint: Use the API Console!!)
+	- Experiment with console logging various fields.
+	*** HINT ***  All of you should be using the API Console. The console allows you to create "test URLs". This way you can confirm that you are pinging the right URL.  https://developer.nytimes.com/community_api_v3.json#/Console
+	- For the back-end team, use hard-coded values whenever you can first. Then switch into "dynamic" URL construction.
+	- You can't actually specify the Number of Records to Retrieve on the API side -- this means that instead you will need to filter records on the Javascript side (using For-Loops)
+	- The NYT API responds with a sub-object called response. This means if you are using the traditional variable response to hold your data, you will need to reference individual entries as response.response.... You can avoid this if you store the object in something other than a variable called response.
+
+Project Update II:	Check with Instructor or TA when you are at this point (Before starting Phase 2)
+
+*************************************************************
+**********    Phase 2 (8:30 pm) Coding the Logic   **********
+*************************************************************
+- You will likely need to work more closely together across teams from this point onwards.
+
+5. (Front-End Team)
+	- Begin creating basic click events. Register the submit button
+	- Create working transfers of data between the text-boxes and the backend
+	- Experiment with creating content regions for where the article will go
+
+5. (Back-End Team)
+	- Create the AJAX call needed to retrieve data then console.log all of the relevant fields
+	- Incorporate various “optional parameters” (hard code these in at first)
+	- Take note of various “bugs” that appear with certain searches.
+
+6. All-Together:
+	- Display the HTML content!!
+
+Project Update III:	Check with Instructor or TA when you are at this point (Before starting Phase 3)
+
+*********************************************************
+**********    Phase 3 (8:55 pm) Bug handling   **********
+*********************************************************
+
+7. (Front-End Team)
+	- Continue polishing the display of content in the HTML
+	- Consider adding styling or other jQuery tricks
+	- Consider using Bootswatch and/or Font Awesome to add more visual appeal
+
+7. (Back-End Team)
+	- Put in a hard-effort to deal with bugs. How can you handle missing fields?
+	- How do you track bugs, who is working on them, and when they are eliminated?
+
+Project Update III:	Check with Instructor or TA when you are at this point (Before starting Phase 3)
+
+*********************************************************
+**********    Phase 4 (9:10 pm) Refine & Deploy  ********
+*********************************************************
+
+8. Time to clean-up their apps and deploy them
+	- Deploy your app to GitHub and Heroku!
+	- Run test cases on your Heroku App.
+
+Project Update IV:	Check with Instructor or TA when you are at this point
+
+9.	Be prepared to share
+
+Some things you may learn throughout this exercise today: 
+... that APIs are harder to use than you might expect sometimes.
+... that working across front-end and back-end requires careful coordination
+... that working in teams can allow you to create cleaner code (as more eyes are fixing the same bugs).
+
+First things, first.  Before you get started, let the instructor know who your team project manager is and how you plan on keeping on the timeline :)

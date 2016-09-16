@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To Do App!</title>
+</head>
+<body>
+
+<!-- Title -->
+<h1>My To Dos!</h1>
+
+<!-- Input Form -->
+<form>
+  <h2>To Do Item: <input type="text" id="todo"><input type="submit" value="Add Item" id="addTodo"></h2>
+</form>
+
+<hr>
+
+<!-- To-Do List -->
+<div id="todos">
+	
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+<script>
+
+// ============================= START CODING BELOW! =============================================
+
+// Create an initial todoCount variable
+var todoCount = 0;
+
+$("#addTodo").on("click", function(){
+
+	// Get the Todo "value" from the textbox
+	var thisTodo = $("#todo").val();
+	//<p id="todo-0"></p>
+	var $todo = $("<p>").attr('id', 'todo-' + todoCount).text(thisTodo);
+	var $delete = $("<button>").data('todo', todoCount).addClass('checkbox').text('X');
+	$todo.append($delete);
+	$todo.appendTo('#todos');
+	$("#todo").val("");
+	todoCount++;
+	// Prevent Form from Refreshing (return false)
+	return false;
+});
+
+// When a user clicks a check box then delete the specific content 
+// (NOTE: Pay attention to the unusual syntax here for the click event. Because we are creating click events on "dynamic" content, we can't just use the usual "on" "click" syntax.)
+$(document.body).on('click', '.checkbox', function(){
+
+	// Get the todoNumber of the button from its data attribute.
+		var todoNumber = $(this).data('todo');
+	$("#todo-"+todoNumber).empty();
+
+	// Empty the specific <p> element that previously held the todo item.
+
+
+
+});
+
+</script>
+
+</body>
+</html>

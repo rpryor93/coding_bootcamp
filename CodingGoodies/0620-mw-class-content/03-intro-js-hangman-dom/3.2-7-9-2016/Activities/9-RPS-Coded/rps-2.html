@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors Part 1</title>
+</head>
+<body>
+
+<div id="game">r, p or s to start</div>
+<script type="text/javascript">
+	// Create an array that lists out all of the options
+	var options = ['r','p','s'];
+	// Declare tallies
+	var wins = 0;
+	var losses = 0;
+	var tie = 0;
+
+	// Captures Key Clicks
+	document.onkeyup = function(event) {
+		var htmlResult = '';
+		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+		alert(userGuess);
+		var computerGuess = options[Math.floor(Math.random()*options.length)];
+		alert(computerGuess);
+
+		if ((userGuess == 'r') || (userGuess == 'p') || (userGuess == 's')) {
+			if (userGuess == computerGuess) {
+				htmlResult = "Draw";
+			} else {
+				htmlResult = "Not a draw";
+			}
+		} else {
+			alert ("Please type r, p or s.");
+		}
+		document.querySelector('#game').innerHTML = htmlResult;
+	}
+</script>
+</body>
+</html>

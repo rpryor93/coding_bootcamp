@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="This page is for...">		
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<title>Page Title</title>
+	</head>
+	<body>
+		<p>Find the letter...</p>
+	</body>
+	<script>
+		var letter;
+		var letters = ['a', 'b', 'c', 'd'];
+
+		function checkLetters(anotherLetter) {
+			if (letters.indexOf(anotherLetter) > -1) {
+				alert ("found the letter");
+			} else {
+				alert ("didn't find it");
+			}
+		}
+		letter = prompt ("Give me a letter");
+		checkLetters(letter);
+		console.log("What?");
+	</script>
+</html>

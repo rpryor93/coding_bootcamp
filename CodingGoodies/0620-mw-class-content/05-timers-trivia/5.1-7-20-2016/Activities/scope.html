@@ -1,0 +1,63 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @KC135Q
+ Watch 11
+  Star 2
+ Fork 8 UCF-Coding-Boot-Camp/06-16-VW-Class-Content Private
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy path06-16-VW-Class-Content/0620-mw-class-content/4-jquery-rpg/4.2-7-16-2016/Activities/6-ScopeThree/Solved/LexicalScope3.html
+90298cb  4 days ago
+@KC135Q KC135Q Class Activities for Saturday uploaded
+1 contributor
+RawBlameHistory     57 lines (45 sloc)  1.15 KB
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>lexicalScope</title>
+    </head>
+    <body style="">
+        <script type="text/javascript">
+        //EXAMPLE ONE global scope
+        var a = 1;
+        function one(){
+            alert("One: " + a);
+        }
+        one(); // what will get alerted? (One: 1)
+        //EXAMPLE TWO local scope
+        function twotop() {
+            function two(a) {
+                alert("Two: " + this.a);
+            }
+            two(a); // what will get alerted? (Two: 1)
+        }
+        twotop();
+        //EXAMPLE THREE local scope
+        var a = 5;
+        function three() {
+            var a = 3;
+            alert("Three: " + a); // what will get alerted (Three: 3)
+        }
+        three();
+        // EXAMPLE FOUR:
+        function first(){
+            var a = 5;
+            function second(){
+                var a = 3;
+                function third(){
+                    alert("Four: " + a);  // what will get alerted? (Four: 3)
+                }
+                third();
+            }
+            second();
+        }
+        first();
+        </script>
+    </body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help

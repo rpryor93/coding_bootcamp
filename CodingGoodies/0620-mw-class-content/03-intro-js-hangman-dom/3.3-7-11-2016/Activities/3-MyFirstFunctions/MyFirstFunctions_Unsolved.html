@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My First Function</title>
+</head>
+<body>
+	
+	<script>
+
+		// FUNCTIONS
+		// ================================================================================
+
+		// Creates Function called "adder" with three arguments (x, y, z) that get passed into it and console.log the result
+
+		function adder(x, y, z) {
+			console.log("add = "+ (x + y + z));
+		}
+
+
+		// Creates a Function called "multiplier" with three arguments (x, y, z) that gets passed into it and console.log the result
+
+		function multiplier(x, y, z){
+			console.log("multiplier =" + (x * y * z));
+		}
+
+
+		// Creates a function called "isString" with three arguments (x, y, z) that gets passed into it and console.log whether all three are a string or not
+
+
+		function isString(x, y, z){
+			var isString = false;
+			if (typeof(x) === 'string' && typeof(y) === 'string' && typeof(z) === 'string') {
+				isString = true;
+			} else {
+				isString = false;
+			}
+			console.log("They are all strings??? " + isString);
+		}
+
+
+		// Creates a function called "vowelChecker" that takes in a single argument (x) and console.log's whether the value is a vowel or not
+
+		function vowelChecker (x) {
+			var vowelArray = ['a', 'e', 'i', 'o', 'u'];
+			pos = vowelArray.indexOf(x)
+			if (pos > -1) {
+				console.log("vowel was found!!");
+			} else {
+				console.log("no vowels here...");
+			}
+		}
+
+
+		// FUNCTION EXECUTION
+		// ================================================================================
+
+		// Add in the lines of code below necessary to "call" the functions you created above.
+		
+		
+		// Call the adder function here
+		adder(1, 2, 3);
+		console.log("-------------------")
+
+		
+		// Call the multiplier function here. 
+
+		multiplier(2, 4, 6);
+		console.log("-------------------")
+
+
+		// Call the isString function here.
+		isString("dog", "cat", true);
+		
+		console.log("-------------------")
+
+
+		// Call the vowelChecker function here.
+		vowelChecker('t');
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- Context.html -->
+<!-- How Timeout's function with this -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Context</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // We define a person, and include a method 
+        // that logs his name along with a greeting.
+        var person = {
+            name: "Jeff",
+            sayHi: function() {
+                console.log("Hi, I'm " + this.name);
+            }
+        };
+
+        // When we run it normally, it works like we intended.
+        person.sayHi();
+        //Hi, I'm Jeff
+
+        // But if we include it in a timeout, it doesn't work as expected.
+        setTimeout(function(){person.sayHi()}, 5000);
+        // How about putting an anonymous function in there - shouldn't work
+        // but it does :) most times due to browser leniency.
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+	<style>iframe { width: 600px; height: 480px;}</style>
+</head>
+<body>
+<div class="search" data-query="cats">Search for Cats</div>
+<div class="search" data-query="nicholas+cage">Search for Nick</div>
+<div class="search" data-query="dog">Search for Dogs</div>
+<div class="search" data-query="birds">Search for Birds</div>
+<div class="search" data-query="aligators">Search for Alligators</div>
+<div id="results"></div>
+
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+	$(".search").on('click', function() {
+		var search = $(this).data('query');
+		console.log('search', search);
+		$.ajax({url: "http://api.giphy.com/v1/gifs/search",
+			data: {
+				limit: 5,
+				api_key: "dc6zaTOxFJmzC",
+				q: search
+			}, method: 'GET'})
+				.done(function(response) {
+					$("#results").empty();
+					console.log(response);
+					$.each(response.data, function (key, gif){
+						$("#results").append('<iframe src="'+gif.embed_url+'"/>');
+					})
+				});
+	});
+
+
+</script>
+
+
+</body>
+</html>

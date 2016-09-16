@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope</title>
+</head>
+<body>
+<script>
+
+var person = {
+	age: 42,
+	name: "Dan",
+	showAge: function () {
+		console.log(person.name);
+	},
+}
+
+person.showAge();
+</script>
+
+</body>
+</html>

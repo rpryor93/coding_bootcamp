@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>this</title>
+  </head>
+  <body style="">
+      
+      <script type="text/javascript">
+
+      	//EXAMPLE ONE
+		// What is `this` going to print?
+		console.log(this);
+
+
+		//EXAMPLE TWO
+		// What is `this` going to print?
+		function myFunction(){
+		  console.log(this);
+		}
+		myFunction();
+
+		//EXAMPLE THREE (Important)
+		// What is `this.name` going to print?
+		var someObj = {
+			name: 'Red Hat',
+			say: function() {
+				console.log(this.name);
+			}
+		};
+		someObj.say();
+
+
+		//EXAMPLE FOUR (Bonus)
+		// What is this going to print? 
+		// Why didn't it print Blue Shell?
+		var myObj = {
+			name: "",
+			yell: function() {
+				this.name = 'Star Powerup';
+				console.log(this.name);
+				var changeName = function(newName) {
+					this.name = newName;
+					console.log('window.name', window.name);
+				};
+				changeName('Blue Shell');
+				console.log(this);
+			},
+			changeName: function (newName) {
+				this.name = newName;
+			}
+		};
+		myObj.yell();
+				myObj.changeName("Better Name!");
+
+		//EXAMPLE FIVE (Bonus)
+		// What is this going to print? 
+		// Why did this print Blue Shell? But not the last example? 
+		var myObj = {
+			name: "",
+			yell: function() {
+				var localCopy = this; //Use 'self' to store 'this' currently pointing to the 'myObj'
+
+				this.name = 'Star Powerup';
+				console.log('ex 5', this.name);
+				var changeName = function(newName) {
+					localCopy.name = newName; //'self' is now the correct 'this' for 'myObj'
+				};
+				changeName('Blue Shell');
+				console.log('ex 5 after', this.name);
+			}
+		};
+		myObj.yell();
+
+      </script>
+  </body>
+</html>

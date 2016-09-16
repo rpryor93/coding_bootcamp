@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Variable Assignment</title>
+</head>
+<body>
+	
+	<!-- Note the script tag here as well as the "text/javascript" -->
+	<script type="text/javascript">
+		
+	// Variables
+	var name = "Joe Frasier";
+	var pizzaCount = 15;
+	var isHungry = true;
+	var totalCost = Math.round(((pizzaCount * 5.00) * 1.065) * 100) / 100;
+	
+	// Instructions: Replace each of the "console.log" functions below with "console.log()"
+	console.group('Pizza Stuffs');
+		console.log("Welcome: " + name);
+
+		console.log("Pizzas cost $5 each");
+
+		console.log("Your total is: $" + totalCost);
+
+		console.log("Still Hungry: " + isHungry);
+	console.groupEnd();
+	</script>
+</body>
+</html>

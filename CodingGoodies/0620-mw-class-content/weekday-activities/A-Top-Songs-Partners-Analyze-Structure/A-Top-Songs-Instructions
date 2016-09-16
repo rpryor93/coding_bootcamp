@@ -1,0 +1,6 @@
+Analyze TopSongs.csv for a few minutes.  This is the data set you will be working with today.
+It contains 5000 lines of music data within it.  Then, working in pairs, come up with a plan for
+creating a database schema (database, table and columns in this case) for this data.  Be ready to share.
+
+??  How many columns will you need?  What is a good name?  What is the data type?  Are any required (NN)?
+??  Should any be auto-incremented (AI)?  What if you don't know what the data field is used for?

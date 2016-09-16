@@ -1,0 +1,1 @@
+* Repeat the program run, but this time run it so the program takes in two numbers. Point out how the result is non-ideal because it concatenated the numbers. This is because `process.argv` always assumes that you are handing it strings.

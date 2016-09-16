@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My First Website!</title>
+	<style>
+		h1 {
+			font-size: 24pt;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		.floatMe {
+			color: #1b6d85;
+			width: 50%;
+			margin: 0 auto;
+			float: left;
+			clear: both;
+		}
+
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+
+		.clearfix {
+			display: inline-block;
+		}
+
+		a {
+			font-family: "Georgia", Times New Roman, Times, serif;
+			color: #00B7FF;
+			text-decoration: none;
+		}
+		a:visited {
+			color: #00455f;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+
+<h1 class="floatMe">BOB IS YELLING</h1>
+<h3 class="floatMe">Even Smaller Header</h3>
+<h2 class="clearfix">Smaller Awesome Header</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem consequatur unde aut dolores odio hic, accusamus recusandae ipsam illum enim voluptatibus obcaecati totam tempora eum quod sapiente. Corporis, quidem, culpa?</p>
+<img src="https://pbs.twimg.com/media/BsgYfMQCQAAWVKH.jpg"
+		 alt="Awesome"
+		 width="25%">
+
+<h3>Menu Links</h3>
+<ul>
+	<li><a href="http://www.google.com">Google</a></li>
+	<li><a href="http://www.facebook.com">Facebook</a></li>
+	<li><a href="http://www.twitter.com">Twitter</a></li>
+</ul>
+
+</body>
+</html>

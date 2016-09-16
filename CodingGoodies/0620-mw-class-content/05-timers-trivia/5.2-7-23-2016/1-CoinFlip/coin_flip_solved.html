@@ -1,0 +1,81 @@
+<!-- Coin Flip HTML Solution-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coin Flipper</title>
+</head>
+<body>
+  <h1>Flip A Coin!</h1>
+  <h2>Guess Heads or Tails:</h2>
+
+  <button id="heads">Heads</button>
+  <button id="tails">Tails</button>
+  <br>
+  <div>You guessed:<span id="guess"></span></div>
+  <br>
+  <div id="coin-image"></div>
+  <div id="win-lose"></div>
+  <div id="win-loss-tracker">
+    <div><h3>Wins: </h3><span id="wins"></span></div>
+    <div><h3>Losses: </h3><span id="losses"></span></div>
+    <div><h3>Heads chosen: </h3> <span id="headsChosen"></span></div>
+    <div><h3>Tails chosen: </h3> <span id="tailsChosen"></span></div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript">
+  // Declare variables
+  var headsCount = 0;
+  var tailsCount = 0;
+  var wins = 0;
+  var losses = 0;
+
+  // Webpage events
+  $('#heads').on('click', function() {
+    headsCount++;
+    $('#headsChosen').html(headsCount);
+    $('#guess').html('<b>Heads</b>');
+    flipThatCoin(0);
+  });
+  $('#tails').on('click', function() {
+    tailsCount++;
+    $('#tailsChosen').html(tailsCount);
+    $('#guess').html('<b>Tails</b>');
+    flipThatCoin(1);    
+  });
+
+  function flipThatCoin(result) {
+    // STEP ONE:
+    // Set a variable named randomNumber to either 0 or 1. Make it random.
+    var randomNumber = Math.floor(Math.random() *2);
+    console.log("RN: " + randomNumber);
+
+    //STEP TWO:
+    if (randomNumber === 0) {
+      $('#coin-image')
+      .html("<img src='http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg'>");
+    } else {
+      $('#coin-image')
+      .html("<img src='http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg'>");
+    }
+    //STEP THREE:
+
+    if (randomNumber === result) {
+      wins++;
+      $('#win-lose')
+      .html("<h2>Winner!</h2>");
+      $('#wins')
+      .html(wins);
+    } else {
+      losses++;
+      $('#win-lose')
+      .html("<h2>Loser!</h2>");
+      $('#losses')
+      .html(losses);       
+    }
+
+  }
+</script>
+</body>
+</html>
